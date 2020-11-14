@@ -17,5 +17,14 @@
   "license": "ISC",
   "dependencies": {
     "fs": "0.0.1-security"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aditya-ds-1806/Chess-PGN-Parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aditya-ds-1806/Chess-PGN-Parser/issues"
+  },
+  "homepage": "https://github.com/Aditya-ds-1806/Chess-PGN-Parser#readme"
 }
