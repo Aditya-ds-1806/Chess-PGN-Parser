@@ -1,0 +1,21 @@
+{
+  "name": "chess-pgn-parser",
+  "version": "1.0.0",
+  "description": "PGN Parser",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Chess",
+    "PGN",
+    "JSON",
+    "Parser",
+    "PGN Parser"
+  ],
+  "author": "Aditya D.S.",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
