@@ -1,6 +1,6 @@
 {
   "name": "chess-pgn-parser",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "PGN Parser",
   "main": "./src/app.js",
   "scripts": {
@@ -15,9 +15,7 @@
   ],
   "author": "Aditya D.S.",
   "license": "MIT",
-  "dependencies": {
-    "fs": "0.0.1-security"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "repository": {
     "type": "git",
