@@ -14,7 +14,7 @@
     "PGN Parser"
   ],
   "author": "Aditya D.S.",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "fs": "0.0.1-security"
   },
