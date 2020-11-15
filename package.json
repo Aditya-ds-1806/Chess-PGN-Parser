@@ -2,7 +2,7 @@
   "name": "chess-pgn-parser",
   "version": "1.1.1",
   "description": "PGN Parser",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
