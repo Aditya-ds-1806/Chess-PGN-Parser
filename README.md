@@ -6,6 +6,10 @@ Chess PGN Parser is an NPM package that parses PGN(Portable Game Notation) files
 const parser = require('chess-pgn-parser');
 var json = parser.pgn2json('path-to-file.pgn');
 console.log(json);
+
+// to get js object as output,
+var object = JSON.parse(json);
+console.log(object);
 ```
 
 # New Features!
