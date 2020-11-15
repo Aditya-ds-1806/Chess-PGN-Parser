@@ -1,6 +1,6 @@
 exports.pgn2json = function (fileName) {
     const fs = require('fs');
-    const pgn = fs.readFileSync('sample-2.pgn').toString().split('\n');
+    const pgn = fs.readFileSync(fileName).toString().split('\n');
     var game = {
         str: {},
         moves: [],

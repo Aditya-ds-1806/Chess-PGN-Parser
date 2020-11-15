@@ -1,6 +1,6 @@
 {
   "name": "chess-pgn-parser",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "PGN Parser",
   "main": "app.js",
   "scripts": {
