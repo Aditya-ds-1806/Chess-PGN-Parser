@@ -1,4 +1,4 @@
-exports.pgn2json = function (pgnText) {
+export function pgn2json (pgnText) {
     const pgn = pgnText.split('\n');
     var game = {
         str: {},
