@@ -4,7 +4,8 @@
   "description": "PGN Parser",
   "main": "./src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && rollup src/app.js --file dist/parser.js --format umd --name \"parser\" && terser dist/parser.js --compress --mangle -o dist/parser.min.js --source-map \"filename=parser.min.map\""
   },
   "keywords": [
     "Chess",
@@ -16,7 +17,9 @@
   "author": "Aditya D.S.",
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "rollup": "^2.33.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Aditya-ds-1806/Chess-PGN-Parser.git"
