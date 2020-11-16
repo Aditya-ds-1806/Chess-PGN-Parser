@@ -16,7 +16,10 @@ console.log(object);
 ```
 
 # New Features!
-
+## v1.3.0
+  - This module is now browser compatible!
+  - Added build script.
+## v1.2.2
   - Added support for `{}` style commentary.
   - Numeric Annotation Glyphs(NAGs) support has also been added.
   - Get stringified JSON output from PGN file.
@@ -34,6 +37,11 @@ Installation is done using the `npm install` command:
 ```
 $ npm install chess-pgn-parser
 ```
+
+Starting from v1.3.0, you can use this package on the browser as well with a CDN.
+
+ - Uncompressed file: https://cdn.jsdelivr.net/npm/chess-pgn-parser@1.3.1/dist/parser.js
+ - Compressed file: https://cdn.jsdelivr.net/npm/chess-pgn-parser@1.3.1/dist/parser.min.js
 
 # Example
 ## PGN File
