@@ -16,13 +16,8 @@ console.log(object);
 ```
 
 # New Features!
-## v1.3.0
   - This module is now browser compatible!
-  - Added build script.
-## v1.2.2
-  - Added support for `{}` style commentary.
-  - Numeric Annotation Glyphs(NAGs) support has also been added.
-  - Get stringified JSON output from PGN file.
+  - Added support for `{}` style commentary and NAGs (Numeric Annotation Glyphs).
 
 # Installation
 
