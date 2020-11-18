@@ -1,3 +1,7 @@
+# v1.3.4 / 18-11-2020
+- Fixed:  Return prettified JSON instead of string (#2).
+
+
 # v1.3.2 / 17-11-2020
 - Added: CHANGELOG.md.
 - Added: examples folder.
