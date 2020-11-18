@@ -4,7 +4,7 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.parser = {}));
 }(this, (function (exports) { 'use strict';
 
-    function pgn2json (pgnText) {
+    function pgn2json(pgnText) {
         const pgn = pgnText.split('\n');
         var game = {
             str: {},
@@ -72,7 +72,7 @@
         });
         moves = moves.filter(val => !val.includes('.') && !val.includes('$'));
         game.moves = moves;
-        return JSON.stringify(game);
+        return JSON.stringify(game, null, 4);
     }
 
     exports.pgn2json = pgn2json;

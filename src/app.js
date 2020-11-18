@@ -1,4 +1,4 @@
-export function pgn2json (pgnText) {
+export function pgn2json(pgnText) {
     const pgn = pgnText.split('\n');
     var game = {
         str: {},
@@ -66,5 +66,5 @@ export function pgn2json (pgnText) {
     });
     moves = moves.filter(val => !val.includes('.') && !val.includes('$'));
     game.moves = moves;
-    return JSON.stringify(game);
+    return JSON.stringify(game, null, 4);
 }
