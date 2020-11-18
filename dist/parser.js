@@ -1,3 +1,4 @@
+/* @module Chess PGN Parser, @version 1.3.7, @copyright Aditya D.S. 2020, @license MIT */
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :

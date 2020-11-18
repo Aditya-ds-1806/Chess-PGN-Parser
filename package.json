@@ -5,7 +5,7 @@
   "main": "./dist/parser.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist && rollup src/app.js --file dist/parser.js --format umd --name \"parser\" && terser dist/parser.js --compress --mangle -o dist/parser.min.js --source-map \"filename=parser.min.map\""
+    "build": "rimraf dist && rollup src/app.js --file dist/parser.js --format umd --name \"parser\" --banner \"/* @module Chess PGN Parser, @version 1.3.7, @copyright Aditya D.S. 2020, @license MIT */\" && terser dist/parser.js --compress --comments --mangle -o dist/parser.min.js --source-map \"filename=parser.min.map\""
   },
   "keywords": [
     "Chess",
