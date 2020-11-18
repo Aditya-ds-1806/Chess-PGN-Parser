@@ -1,3 +1,6 @@
+# v1.3.5 / 18-11-2020
+- Added: [documentation website hosted with github pages](https://aditya-ds-1806.github.io/Chess-PGN-Parser/)
+
 # v1.3.4 / 18-11-2020
 - Fixed:  Return prettified JSON instead of string (#2).
 
