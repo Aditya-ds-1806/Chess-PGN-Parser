@@ -1,5 +1,11 @@
 # Chess PGN Parser
 
+![Node.js CI](https://github.com/Aditya-ds-1806/Chess-PGN-Parser/workflows/Node.js%20CI/badge.svg)
+![GitHub package.json version](https://img.shields.io/npm/v/chess-pgn-parser?logo=npm)
+![npm](https://img.shields.io/npm/dm/chess-pgn-parser?logo=NPM)
+![NPM Bundle Size](https://img.shields.io/bundlephobia/min/chess-pgn-parser)
+![GitHub](https://img.shields.io/npm/l/chess-pgn-parser)
+
 Chess PGN Parser is an NPM package that parses PGN(Portable Game Notation) files and returns JSON output. Currently, annotations are not supported, but this feature will be added very soon!
 
 ```js
@@ -7,10 +13,11 @@ const parser = require('chess-pgn-parser');
 const fs = require('fs');
 
 var pgn = fs.readFileSync('path-to-file.pgn');
+// to get JSON 
 var json = parser.pgn2json(pgn);
 console.log(json);
 
-// to get js object as output,
+// to get JS object
 var object = JSON.parse(json);
 console.log(object);
 ```
@@ -35,8 +42,8 @@ $ npm install chess-pgn-parser
 
 Starting from v1.3.0, you can use this package on the browser as well with a CDN.
 
- - Uncompressed file: https://cdn.jsdelivr.net/npm/chess-pgn-parser@1.3.1/dist/parser.js
- - Compressed file: https://cdn.jsdelivr.net/npm/chess-pgn-parser@1.3.1/dist/parser.min.js
+ - Uncompressed file(latest version): https://cdn.jsdelivr.net/npm/chess-pgn-parser/dist/parser.js
+ - Compressed file(latest version): https://cdn.jsdelivr.net/npm/chess-pgn-parser/dist/parser.min.js
 
 # Example
 ## PGN File
@@ -293,11 +300,9 @@ Nd1 Qc4 44. Rb1 h5 45. h4 f5 46. Rdb2 f4 47. Rb3 fxg3 48. Rxg3 Qc2 49. Rb7+ Kh6
 
 # Coming Soon!
 
- - Annotations support
- - JSON data to PGN file conversion
- - Demo website
+ - End of line comment support (; styled annotations)
 
 License
 ----
 
-ISC
+MIT
