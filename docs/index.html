@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chess PGN Parser</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    .btn {
+      background-color: var(--theme-color, #42b983);
+      margin: .5rem 1rem;
+      padding: .75em 2rem;
+      color: #fff;
+      border-radius: 2rem;
+      box-sizing: border-box;
+      font-size: 1.05rem;
+      letter-spacing: 0.1rem;
+      border: 1px solid var(--theme-color, #42b983);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+    }
+
+    .btn:hover {
+      color: inherit;
+      opacity: 0.8;
+    }
+
+    textarea {
+      resize: vertical;
+      width: 100%;
+      font-family: consolas, Monaco, monospace
+    }
+
+    pre {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" style="display: flex; justify-content: center; align-items: center;">
+    Loading...
+  </div>
+  <script>
+    window.$docsify = {
+      name: 'Chess PGN Parser',
+      repo: 'https://github.com/Aditya-ds-1806/Chess-PGN-Parser',
+      coverpage: true,
+      copyCode: {
+        buttonText: 'Copy to clipboard',
+        errorText: 'Error',
+        successText: 'Copied'
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://unpkg.com/docsify-copy-code@2"></script>
+  <!-- Chess PGN Parser latest version -->
+  <script src="https://cdn.jsdelivr.net/npm/chess-pgn-parser/dist/parser.min.js"></script>
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
+</body>
+
+</html>
