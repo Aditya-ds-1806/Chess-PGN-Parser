@@ -37,10 +37,10 @@ export function pgn2json(pgnText) {
     game.nag = moves.filter(val => val.includes('$')).map(val => {
         var prev = 0;
         if (temp.length) {
-            prev = temp.reverse()[0];
+            prev = temp[temp.length - 1];
         }
         var count = movPos.filter(i => i < moves.indexOf(val, prev));
-        temp.push(count.reverse()[0]);
+        temp.push(count[count.length - 1]);
         return {
             moveCount: count.length,
             value: val
