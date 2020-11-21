@@ -1,7 +1,12 @@
-import { getCommentary, getNags, getStrAndStringifyMoves } from "./helpers";
+import {
+    getCommentary,
+    getNags,
+    getStrAndStringifyMoves,
+    removeEscapeMechanism
+} from "./helpers";
 
 export function pgn2json(pgnText) {
-    const pgn = pgnText.split('\n');
+    var pgn = pgnText.split('\n');
     var game = {
         str: {},
         moves: [],
@@ -10,6 +15,8 @@ export function pgn2json(pgnText) {
     }
     var moves, moveClone, movPos = [];
 
+    pgn.forEach((_, i, pgn) => pgn[i] = pgn[i].trim().replace('\r', ''));
+    pgn = removeEscapeMechanism(pgn);
     [game.str, moves] = getStrAndStringifyMoves(pgn);
     moveClone = moves.join('').split(' ');
     for (let i = 1; moveClone.includes(`${i}.`); i++) {

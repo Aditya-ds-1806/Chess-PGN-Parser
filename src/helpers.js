@@ -1,7 +1,11 @@
+// returns pgn line-by-line array after filtering out comments (%)
+export function removeEscapeMechanism(pgn) {
+    return pgn.filter(line => line.trim()[0] !== '%');
+}
+
 // returns an array containing an STR object and a string containing the movetext
 export function getStrAndStringifyMoves(pgn) {
     var str = {};
-    pgn.forEach((_, i, pgn) => pgn[i] = pgn[i].trim().replace('\r', ''));
     for (let i = 0; i < pgn.length; i++) {
         var line = pgn[i];
         if (line[0] === '[') {
