@@ -22,7 +22,7 @@ export function pgn2json(pgnText) {
         }
     }
 
-    // get positions of commentary
+    // get move positions
     var movPos = [];
     var moveClone = moves.join('').split(' ');
 
@@ -30,28 +30,10 @@ export function pgn2json(pgnText) {
         movPos.push(moveClone.indexOf(`${i}.`));
     }
 
-    // extract commentary and corresponding move
-    while (moves.indexOf('{') !== -1) {
-        var commentStartPos = moves.indexOf('{');
-        var commentEndPos = moves.indexOf('}');
-        var comment = moves.splice(commentStartPos, commentEndPos - commentStartPos + 2).join('');
-        var commentIndex = moveClone.indexOf(comment.split(' ')[0]);
-        game.annotations.push({
-            moveCount: movPos.filter(ind => ind < commentIndex).length,
-            comment: comment.substring(1, comment.length - 2)
-        });
-    }
-
-    // update move positions
-    moves = moves.join('').split(' ');
-    moves.pop();
-    movPos = [];
-    for (let i = 1; moves.includes(`${i}.`); i++) {
-        movPos.push(moves.indexOf(`${i}.`));
-    }
-
     // extract NAGs and corresponding move
     var temp = [];
+    moves = moves.join('').split(' ');
+    moves.pop();
     game.nag = moves.filter(val => val.includes('$')).map(val => {
         var prev = 0;
         if (temp.length) {
@@ -64,6 +46,21 @@ export function pgn2json(pgnText) {
             value: val
         }
     });
+
+    // extract commentary and corresponding move
+    moves = moves.join(' ').split('');
+    while (moves.indexOf('{') !== -1) {
+        var commentStartPos = moves.indexOf('{');
+        var commentEndPos = moves.indexOf('}');
+        var comment = moves.splice(commentStartPos, commentEndPos - commentStartPos + 2).join('');
+        var commentIndex = moveClone.indexOf(comment.split(' ')[0]);
+        game.annotations.push({
+            moveCount: movPos.filter(ind => ind < commentIndex).length,
+            comment: comment.substring(1, comment.length - 2)
+        });
+    }
+
+    moves = moves.join('').split(' ');
     moves = moves.filter(val => !val.includes('.') && !val.includes('$'));
     game.moves = moves;
     return JSON.stringify(game, null, 4);
