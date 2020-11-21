@@ -9,9 +9,8 @@ export function pgn2json(pgnText) {
         nag: []
     }
     var moves, moveClone, movPos = [];
-    [game.str, moves] = getStrAndStringifyMoves(pgn);
 
-    movPos = [];
+    [game.str, moves] = getStrAndStringifyMoves(pgn);
     moveClone = moves.join('').split(' ');
     for (let i = 1; moveClone.includes(`${i}.`); i++) {
         movPos.push(moveClone.indexOf(`${i}.`));
