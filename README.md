@@ -24,7 +24,7 @@ console.log(object);
 
 # New Features!
   - This module is now browser compatible!
-  - Added support for `{}` style commentary and NAGs (Numeric Annotation Glyphs).
+  - Support for escape mechansim (%)
 
 # Installation
 

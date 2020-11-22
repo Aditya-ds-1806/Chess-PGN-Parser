@@ -1,3 +1,8 @@
+# v1.3.7 / 22-11-2020
+- Added: support for escape mechanism
+- Fixed: add support for escape mechanism (#3)
+- Refactor: source code
+
 # v1.3.6 / 18-11-2020
 - Added: github build workflow
 - Added: badges in README.md
