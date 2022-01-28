@@ -51,3 +51,33 @@ export function getCommentary(moves, moveClone, movPos) {
     }
     return comments;
 }
+
+// splits array of pgn lines into array of array of pgn lines where each array contains new game
+export function extractMultipleGames(pgnText) {
+    let pgn = pgnText.split('\n');
+    let pgns = [];
+    const init = 0, insideTags = 1, afterTags = 2
+
+    let state = init;
+    let currentPgn = [];
+    pgn.forEach(function(line) {
+        if (state === init && line.startsWith("[")) {
+            state = insideTags;
+            currentPgn.push(line)
+        } else if (state === insideTags) {
+            if (!line.startsWith("[")) state = afterTags;
+            currentPgn.push(line)
+        } else { //afterTags
+            if (line.startsWith("[")) {
+                pgns.push(currentPgn);
+                currentPgn = [line];
+                state = insideTags;
+            } else currentPgn.push(line)
+        }
+    })
+
+    // push the last game
+    pgns.push(currentPgn);
+
+    return pgns;
+}
