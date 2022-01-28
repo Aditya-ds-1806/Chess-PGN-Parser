@@ -1,5 +1,5 @@
 # Chess PGN Parser
-!> PGN to JSON in seconds.
+PGN to JSON in seconds.
 
 # About
 **Chess PGN Parser** is an NPM package that parses PGN(Portable Game Notation) files and returns prettified JSON output. What makes this unique is that it is not like most other packages that cannot handle annotations. You can use it both on the client using a CDN and on the server using `npm` or `yarn`.
@@ -138,10 +138,10 @@ console.log(obj);
         var pgn = document.querySelector("#pgn").value;
         // to get JSON
         var json = parser.pgn2json(pgn); // thats it!
-        document.querySelector("json-display").textContent = json;
+        document.querySelector("#json-display").textContent = json;
         // to get JS object
         var obj = JSON.parse(json);
-        document.querySelector("obj-display").textContent = obj;
+        document.querySelector("#obj-display").textContent = obj;
       });
   </script>
 </body>
